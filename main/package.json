@@ -1,0 +1,18 @@
+{
+  "name": "qdc-mini-assignment",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "install-all": "npm install --workspaces",
+    "dev": "concurrently \"npm run dev --workspace backend\" \"npm start --workspace frontend\"",
+    "server": "npm run dev --workspace backend",
+    "client": "npm start --workspace frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
